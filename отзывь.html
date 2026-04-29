@@ -1,0 +1,378 @@
+<style>
+    .bottom-reviews {
+        padding: 60px 5% 100px;
+        background: linear-gradient(to bottom, #f0a10f, #000);
+        border-top: 4px solid var(--hot-orange);
+    }
+
+     .bottom-reviews {
+        padding: 60px 5% 100px;
+        background: linear-gradient(to bottom, #000000, #ebb507);
+        border-top: 4px solid var(--hot-orange);
+    }
+
+    .bottom-reviews h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+    }
+
+    .reviews-grid-compact {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
+
+     
+
+    .review-mini-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--neon-yellow);
+    }
+
+    .dish-preview {
+        width: 100%;
+        height: 150px;
+        background: #131212;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+    }
+
+    .user-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .user-name {
+        font-weight: 900;
+        color: var(--neon-yellow);
+        font-size: 0.9rem;
+    }
+
+    .stars {
+        color: #ffcc00;
+        font-size: 0.8rem;
+    }
+
+    .review-text {
+        font-size: 1.2rem;
+        color: #bbb;
+        line-height: 1.4;
+    }
+
+    .add-review-fixed {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .btn-small {
+        background: none;
+        border: 1px solid var(--neon-yellow);
+        color: var(--neon-yellow);
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+      nav a {
+            color: rgb(248, 248, 248);
+            text-decoration: center;
+            margin: 0 30px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--neon-yellow); }
+
+    
+    .contact-section {
+
+        padding: 80px 5%;
+        background: #363636;
+        text-align: center;
+        border-top: 2px dashed var(--neon-yellow);
+    }
+
+    .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        padding: 40px;
+        border-radius: 30px;
+        box-shadow: 0 0 40px rgba(221, 154, 9, 0.384);
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+        color: var(--neon-yellow);
+        margin-bottom: 10px;
+    }
+
+    .contact-section p {
+        font-size: 1.1rem;
+        color: #d4a82f;
+        margin-bottom: 30px;
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form input, 
+    .contact-form textarea {
+        background: #3f3e3e;
+        border: 2px solid #e9aa22;
+        border-radius: 12px;
+        padding: 15px;
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+        outline: none;
+        transition: 0.3s;
+    }
+
+    .contact-form input:focus, 
+    .contact-form textarea:focus {
+        border-color: var(--hot-orange);
+        box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    }
+
+    .send-btn {
+        background: var(--hot-orange);
+        color: white;
+        border: none;
+        padding: 20px;
+        border-radius: 12px;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 1.2rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: 0.3s;
+        margin-top: 10px;
+    }
+
+    .send-btn:hover {
+        background: #ff6a00;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(255, 69, 0, 0.4);
+    }
+
+    .send-btn:active {
+        transform: scale(0.95);
+    }
+    
+    .review-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+  color: #ffcc00;
+}
+.upload-section {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.round-preview {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 5px;
+  cursor: pointer;
+  overflow: hidden; 
+  background-color: #f8f9fa;
+  transition: 0.3s;
+}
+
+.round-preview:hover {
+  border-color: #ff0015;
+  color: #ff0015;
+}
+
+.round-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.round-preview span {
+  font-size: 30px;
+  color: #aaa;
+}
+
+.custom-file-upload p {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  cursor: pointer;
+}
+
+</style>
+
+<section class="bottom-reviews">
+     <nav>
+            <a href="index.html">🏠</a>
+            <a href="связь.html">СВЯЗЬ С НАМИ</a>
+        </nav>
+    <h2>🔥 База базарит</h2>
+    
+    <div class="reviews-grid-compact">
+      
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 1.jpg style="width: 150px;" ></div>
+            <div class="user-header">
+                <span class="user-name">@MAX_ROCKET</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">«Бургер — пушка! Соус реально течет, салфеток надо мешок, но вкус того стоит.»</p>
+        </div>
+
+      
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 4.jpg style="width: 150px;" > </div>
+            <div class="user-header">
+                <span class="user-name">@MASHA_PIP</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">Очень вкусно но салфетку забыли</p>
+        </div>
+
+       
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 2.jpg style="width: 150px;" ></div>
+            <div class="user-header">
+                <span class="user-name">@ALEXEY</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">«Пицца приехала горячая, сыр реально тянется как в рекламе. Респект курьеру!»</p>
+        </div>
+    </div>
+
+     
+</section>
+
+<section class="bottom-reviews">
+    
+    <div class="reviews-grid-compact">
+       
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 5.jpg style="width: 155px;" ></div>
+            <div class="user-header">
+                <span class="user-name">@NATASHINKA</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">пицца совсем вкусно и с быстрее доставка</p>
+        </div>
+
+        
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 3.jpg style="width: 140px;" ></div>
+            <div class="user-header">
+                <span class="user-name">@DIMON</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">«Пицца горячая, Респект курьеру!»</p>
+        </div>
+
+       
+        <div class="review-mini-card">
+            <div class="dish-preview"><img src= 6.jpg style="width: 150px;" ></div>
+            <div class="user-header">
+                <span class="user-name">@ALEXANDR_OVA</span>
+                <span class="stars">★★★★★</span>
+            </div>
+            <p class="review-text">напиток очень вусно и холодно</p>
+        </div>
+    </div>
+
+    
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-container">
+        
+        <h2>📞 Свяжись с бандой</h2>
+        <p>«Есть идеи? Проблемы? Хочешь признаться нам в любви? Пиши, мы не кусаемся!»</p>
+        <div class="upload-section">
+  <label for="file-input" class="custom-file-upload">
+    <div id="image-preview" class="round-preview">
+      <span>+</span> 
+    </div>
+    <p>Добавить фото</p>
+  </label>
+  <input id="file-input" type="file" accept="image/*" onchange="previewImage(event)" style="display:none;">
+</div>
+
+        <div class="review-section">
+  <div class="star-rating">
+    <input type="radio" name="stars" id="star-5" value="5"><label for="star-5">★</label>
+    <input type="radio" name="stars" id="star-4" value="4"><label for="star-4">★</label>
+    <input type="radio" name="stars" id="star-3" value="3"><label for="star-3">★</label>
+    <input type="radio" name="stars" id="star-2" value="2"><label for="star-2">★</label>
+    <input type="radio" name="stars" id="star-1" value="1"><label for="star-1">★</label>
+  </div>
+        <form class="contact-form">
+            <input type="text" placeholder="Твой номер смерт" required>
+            <textarea rows="4" placeholder="Что скажешь?" required></textarea>
+            
+            <button type="submit" class="send-btn">🚀 ОТПРАВИТЬ СВОИ ОТЗЫВ</button>
+        </form>
+    </div>
+
+</section>
+
+<footer style="text-align: center; padding: 20px; color: #444; font-size: 0.8rem;">
+    © 2026 ЕШЬ-БЕГИ. Все права защищены. Доставка быстрее звука.
+</footer>
+<script>
+ function previewImage(event) {
+  const reader = new FileReader();
+  const preview = document.getElementById('image-preview');
+  
+  reader.onload = function() {
+    preview.innerHTML = `<img src="${reader.result}" alt="Preview">`;
+    preview.style.borderStyle = "solid";
+  }
+  
+  if (event.target.files[0]) {
+    reader.readAsDataURL(event.target.files[0]);
+  }
+}
+</script>

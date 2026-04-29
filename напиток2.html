@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ешь-беги</title>
+    <style>
+        :root { --accent: #f39c12; --card-bg: #0a0a0a; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; margin: 0; background: #000; color: #fff; 
+            padding-top: 100px; line-height: 1.6;
+        }
+        nav {
+            background: rgba(10, 10, 10, 0.95); height: 70px; width: 100%; position: fixed; 
+            top: 0; z-index: 1000; display: flex; justify-content: left; align-items: center;
+            border-bottom: 1px solid #222; backdrop-filter: blur(10px);
+        }
+        nav a { color: #fff; text-decoration: none; margin: 0 20px; font-weight: 600; text-transform: uppercase; font-size: 12px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        .product-container {
+            max-width: 1100px; margin: 0 auto; padding: 20px;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 50px;
+        }
+        .product-image img {
+            width: 100%; border-radius: 15px; border: 1px solid #222;
+            box-shadow: 0 0 30px rgba(243, 156, 18, 0.1);
+        }
+        .product-info h1 { color: var(--accent); font-size: 2.5rem; margin-top: 0; text-transform: uppercase; }
+        .product-price { font-size: 2rem; font-weight: 800; margin: 20px 0; color: #fff; }
+        .description-box { background: #080808; padding: 25px; border-radius: 12px; border: 1px solid #1a1a1a; margin-bottom: 30px; }
+        .description-box h3 { color: var(--accent); margin-top: 0; text-transform: uppercase; font-size: 1rem; }
+    
+        .specs { list-style: none; padding: 0; margin-bottom: 30px; }
+        .specs li { padding: 10px 0; border-bottom: 1px solid #111; display: flex; justify-content: space-between; }
+        .specs span { color: #666; }
+        .btn-action {
+            background: var(--accent); color: #000; border: none; padding: 18px 40px;
+            border-radius: 8px; cursor: pointer; font-weight: 800; text-transform: uppercase;
+            width: 100%; transition: 0.3s; font-size: 1rem;
+        }
+        .btn-action:hover { background: #fff; transform: translateY(-3px); }
+        @media (max-width: 800px) {
+            .product-container { grid-template-columns: 1fr; }
+            .product-info { text-align: center; }
+        }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="напитки.html">← Назад </a>
+</nav>
+<div class="product-container">
+    <div class="product-image">
+        <img id="p-img" src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/481e04b493aea61d750a884531a7931b.png" alt="Товар">
+    </div>
+    <div class="product-info">
+        <h1 id="p-title">Фрустайл Апельсин</h1>
+        <div class="product-price" id="p-price">190.00 ₽</div>
+        <div class="description-box">
+            <h3>Описание</h3>
+            <p id="p-desc">Frustyle - это необычный газированный напиток или лимонад. Фрустайл со вкусом Апельсин - это газировка яркого оранжевого цвета со вкусом спелого сладкого апельсина с освежающей волной из миллиона пузырьков.</p>
+        </div>
+        <ul class="specs">
+            <li><span>Артикул:</span> <strong id="p-art">NA-56023</strong></li>
+        </ul>
+        <button class="btn-action">Добавить в корзину</button>
+    </div>
+</div>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    if(urlParams.has('name')) {
+        document.getElementById('p-title').innerText = urlParams.get('name');
+        document.getElementById('p-price').innerText = urlParams.get('price');
+    }
+</script>
+
+</body>
+</html>

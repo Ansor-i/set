@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЗАКУСКА</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #121212; 
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: auto;
+            background: #1e1e1e; 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: #ffffff; text-align: center; text-transform: uppercase; letter-spacing: 2px; }
+        p { text-align: center; color: #bbb; }
+
+        .product-grid {
+            display: grid;
+            
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .product-card {
+            background: #252525;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            border-color: #ffc107;
+            box-shadow: 0 0 15px rgba(255, 193, 7, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 190px; 
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background: #333; 
+        }
+
+        .price {
+            font-weight: bold;
+            color: #00ff88;
+            font-size: 1.2em;
+            display: block;
+            margin: 10px 0;
+        }
+
+        .buy-btn {
+            background: #ffc107;
+            color: #000;
+            border: none;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: left;
+    background: #1e1e1e;
+    padding: 15px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid #ffc107;
+    margin-bottom: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ffc107; 
+}
+.navbar a.active {
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 5px;
+}
+        
+        .buy-btn:hover { background: #fff; }
+
+        
+        @media (max-width: 900px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+    <a href="index.html" class="active">🏠︎</a>
+</nav>
+
+<div class="container">
+    <h1>ЗАКУСКА </h1>
+    <p>быстрая доставка.даже не успеешь жрат!!</p>
+
+    <div class="product-grid">
+      
+        <div class="product-card">
+            <img src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/7817b8395e269eed2a97beb6819865df.png" alt="Пицца">
+            <h3>Кинг Фри Лобстер в соусе Бешамель большой 155 г</h3>
+            <span class="price">210 ₽</span>
+            <form action="закуска1.html"><input type="submit" class="buy-btn" value="Подробнее" /></form>
+        </div>
+
+        <div class="product-card">
+            <img src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/b809411b2005530cf77a801ddbdbfe58.png" alt="Суши">
+            <h3>Наггетсы Лобстер в соусе Бешамель (3 шт.)</h3>
+            <span class="price">190 ₽</span>
+             <form action="закуска2.html"><input type="submit" class="buy-btn" value="Подробнее" /></form>
+        </div>
+
+        <div class="product-card">
+            <img src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/d41dc8e655bab4b6de1d35300895a4f1.png" alt="Суп">
+            <h3>Крылышки (6 шт.) 235 г</h3><br>
+            <span class="price">600 ₽</span>
+            <form action="закуска3.html"><input type="submit" class="buy-btn" value="Подробнее" /></form>
+        </div>
+
+        <div class="product-card">
+            <img src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/9c6081bae3b5cc85f97fb142d813b401.png" alt="Десерт">
+            <h3>Кинг Букет «Большой Микс»</h3><br>
+            <span class="price">590 ₽</span>
+           <form action="закуска4.html"><input type="submit" class="buy-btn" value="Подробнее" /></form>
+        </div>
+        <div class="product-card">
+            <img src="https://orderapp-app-static.burgerkingrus.ru/x512/catalog/images/dishes/59117f4d1fb9fed1a5087c3fe5bce9f0.png" alt="Напиток">
+            <h3>Кинг Гоу Наггетсы</h3>
+            <span class="price">110 ₽</span>
+        <form action="закуска5.html"><input type="submit" class="buy-btn" value="Подробнее" /></form>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
